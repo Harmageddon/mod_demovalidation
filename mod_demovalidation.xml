@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Subform Validation Demo</name>
+	<author>Constantin Romankiewicz</author>
+	<version>0.0.1</version>
+	<description>This module won't show anything. Its only purpose is to display a form in backend.</description>
+	<files>
+		<filename>mod_demovalidation.xml</filename>
+		<filename module="mod_demovalidation">mod_demovalidation.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addformpath="/modules/mod_demovalidation/">
+				<field
+					name="num"
+					type="text"
+					label="Number"
+					filter="int"
+				/>
+				<field
+					name="mail"
+					type="text"
+					default=""
+					label="Mail"
+					validate="email"
+				/>
+				<field
+					name="entries"
+					type="subform"
+					formsource="subform"
+					multiple="false"
+					label="Subform"
+					filter="subform"
+					validate="subform"
+					/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
