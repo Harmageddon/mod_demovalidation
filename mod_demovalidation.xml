@@ -6,6 +6,7 @@
 	<description>This module won't show anything. Its only purpose is to display a form in backend.</description>
 	<files>
 		<filename>mod_demovalidation.xml</filename>
+		<filename>subform.xml</filename>
 		<filename module="mod_demovalidation">mod_demovalidation.php</filename>
 	</files>
 	<config>
